@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "CarRequestSystem"
+description = "Система заказа служебного автомобиля."
+version = "0.0.1"
+dependencies = [
+  "fastapi",
+  "SQLAlchemy",
+]
+requires-python = ">=3.12"
+authors = [
+  {name = "Victor Kozlov", email = "victor-n.k@yandex.ru"},
+]
+maintainers = [
+  {name = "Victor Kozlov", email = "victor-n.k@yandex.ru"}
+]
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+keywords = []
+classifiers = [
+  "Development Status :: 0 - Start developing",
+  "Programming Language :: Python",
+  "Private :: Do Not Upload"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest >= 8",
+  "pytest-cov >= 6"
+]
+
+[project.urls]
+Homepage = "https://example.com"
+Documentation = "https://readthedocs.org"
+Repository = "https://github.com/me/spam.git"
+"Bug Tracker" = "https://github.com/me/spam/issues"
+Changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
+
+[project.scripts]
+
+
+[project.gui-scripts]
+
+
+[project.entry-points."spam.magical"]

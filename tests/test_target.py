@@ -15,20 +15,19 @@ logger = getLogger(__name__)
 @mark.parametrize(
     "params",
     [
-        {"organization_name": "abc", "city": "Cheboksary", "street": "Chelomeya", "building": "1"},
         {
             "organization_name": "abc",
             "city": "Cheboksary",
-            "street": "Chelomeya",
-            "building": "1",
-            "office": 176,
+            "street": "Nikolaeva",
+            "building": "1/1",
+            "office": 671,
         },
         {
             "organization_name": "abc",
             "city": "Cheboksary",
-            "street": "Chelomeya",
-            "building": "1",
-            "office_name": "176",
+            "street": "Nikolaeva",
+            "building": "1/1",
+            "office_name": "671",
             "coordinates": Coordinates(),
         },
     ],
@@ -44,13 +43,13 @@ def test_target_create_ok(params: Mapping[str, Any]) -> None:
         ({}, KeyError),
         ({"organization_name": "abc"}, KeyError),
         ({"organization_name": "abc", "city": "Cheboksary"}, KeyError),
-        ({"organization_name": "abc", "city": "Cheboksary", "street": "Chelomeya"}, KeyError),
+        ({"organization_name": "abc", "city": "Cheboksary", "street": "Nikolaeva"}, KeyError),
         (
             {
                 "organization_name": "abc",
                 "city": "Cheboksary",
-                "street": "Chelomeya",
-                "building": 1,
+                "street": "Nikolaeva",
+                "building": 11,
             },
             KeyError,
         ),
